@@ -21,15 +21,15 @@ const QuestionDisplay: React.FC<Props> = ({
     <p className="num">
       Question : {questionNo} / {totalQuestions}
     </p>
-    <p dangerouslySetInnerHTML={{ --html: question }} />
+    <p dangerouslySetInnerHTML={{ __html: question }} />
     <div>
-        {answers.map answer => (
-            <div>
-                <button disabled={userAnswer} onClick={callback}>
+        {answers.map((answer) => (
+            <div key={answer}>
+                <button disabled={userAnswer} value={answer} onClick={callback}>
                     <span dangerouslySetInnerHTML={{ __html: answer }} />
                 </button>
             </div>
-        )}   
+        ))}   
     </div>
   </div>
 );
