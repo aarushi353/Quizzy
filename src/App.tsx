@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import QuestionDisplay from "./components/QuestionDisplay"
 
-function App() {
+const TOTAL_QUESTIONS = 10;
+
+const App = () => {
+  const [loading, setLoading] = useState(false);
+  const [questions, setQuestions] = useState([]);
+  const [number, setNumber] = useState(0);
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(true);
+  
+
+  const start = async () => {
+    
+  }
+
+  const checkAns = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+  }
+
+  const nextQues = () => {
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Anime fans, huh?</h1>
+      <button className="start" onClick={start}>
+        Let's begin...
+      </button>
+      <p className="score">Score:</p>
+      <p>Hold on, loading questions...</p>
+      <QuestionDisplay
+        questionNo={number+1}
+        totalQuestions={TOTAL_QUESTIONS}
+        question={questions[number].question}
+        answers={questions[number].answers}
+        userAnswer={userAnswers ? userAnswers[number]:undefined}
+        callback={checkAns}
+      />
+      <button className="next" onClick={nextQues}></button>
+      Next Question
     </div>
   );
 }
