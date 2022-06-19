@@ -3,7 +3,7 @@ import QuestionDisplay from "./components/QuestionDisplay";
 import { fetchQuizQuestions } from "./Api";
 import { QuestionsState, difficulty } from "./Api";
 
-import {GlobalStyle, Wrapper } from "./App.styles";
+import {GlobalStyle, Wrapper } from "./assets/css/App.styles";
 
 
 export type AnswerObject = {
