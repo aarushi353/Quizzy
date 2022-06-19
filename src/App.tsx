@@ -3,7 +3,10 @@ import QuestionDisplay from "./components/QuestionDisplay";
 import { fetchQuizQuestions } from "./Api";
 import { QuestionsState, difficulty } from "./Api";
 
-type AnswerObject = {
+import {GlobalStyle, Wrapper } from "./App.styles";
+
+
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -63,19 +66,20 @@ const App = () => {
       setNumber(nextQ);
     }
   };
-  return (
-    <div className="App">
-      <h1>Hey there, Anime fans!</h1>
+  return (<>
+    <GlobalStyle />
+    <Wrapper>
+      <h1>Hi, Anime fans!</h1>
       <p>
         {" "}
-        Let's play a game checking how much you know about Anime and Manga!
+        Let's play a game testing how much you know about Anime and Manga!
       </p>
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
         <button className="start" onClick={start}>
-          Let's begin...
+          Start 
         </button>
       ) : null}
-      {!gameOver ? <p className="score">Score:</p> : null}
+      {!gameOver ? <p className="score" style={{marginTop:30}}>Score: {score}</p>: null}
       {loading && <p>Hold on, loading questions...</p>}
       {!loading && !gameOver && (
         <QuestionDisplay
@@ -96,7 +100,8 @@ const App = () => {
           Next Question
         </button>
       ) : null}
-    </div>
+    </Wrapper>
+    </>
   );
 };
 
