@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import BGImage from '../images/Quizzy-bg.jpg';
+import BGImage from '../images/Quizzy-background.jpg';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -40,7 +40,7 @@ export const Wrapper = styled.div`
     font-family: Fascinate Inline;
     font-weight: 400;
     background-size: 100%;
-    color: white;
+    color: #56ccff;
     background-clip: text;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;

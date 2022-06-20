@@ -79,7 +79,7 @@ const App = () => {
           Start 
         </button>
       ) : null}
-      {!gameOver ? <p className="score" style={{marginTop:30}}>Score: {score}</p>: null}
+      {!gameOver ? <p className="score" style={{marginTop:20}}>Score: {score}</p>: null}
       {loading && <p>Hold on, loading questions...</p>}
       {!loading && !gameOver && (
         <QuestionDisplay
