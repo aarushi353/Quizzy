@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.2631e11b.js",
+    "main.js": "/static/js/main.bf79ff7a.js",
     "static/media/Quizzy-background.jpg": "/static/media/Quizzy-background.eb9a888632419a1d3be5.jpg",
     "index.html": "/index.html",
-    "main.2631e11b.js.map": "/static/js/main.2631e11b.js.map"
+    "main.bf79ff7a.js.map": "/static/js/main.bf79ff7a.js.map"
   },
   "entrypoints": [
-    "static/js/main.2631e11b.js"
+    "static/js/main.bf79ff7a.js"
   ]
 }
